@@ -1,0 +1,24 @@
+{
+  "name": "multiplier2",
+  "version": "1.0.0",
+  "description": "This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netanmangal/zero-knowledge-projects.git"
+  },
+  "author": "Netan Mangal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netanmangal/zero-knowledge-projects/issues"
+  },
+  "homepage": "https://github.com/netanmangal/zero-knowledge-projects#readme",
+  "dependencies": {
+    "hardhat": "^2.10.1"
+  }
+}
