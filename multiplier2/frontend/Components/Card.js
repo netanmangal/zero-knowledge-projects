@@ -59,7 +59,7 @@ const Card = () => {
 
             <div className={detailStyles.fotter}>
                 <button className={styles.gradientButton} onClick={() => {
-                    verifyRequestor(localState, setLocalState)
+                    verifyRequestor(localState, setLocalState);
                 }}>
                     Check, If I Know !!!
                 </button>
