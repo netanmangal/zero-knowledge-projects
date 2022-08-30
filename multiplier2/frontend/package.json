@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "babel-loader": "^8.2.5",
+    "babel-preset-es2015": "^6.24.1",
     "ffjavascript": "^0.2.55",
     "next": "12.1.6",
     "react": "18.1.0",
