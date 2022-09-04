@@ -3,6 +3,7 @@ import { useAccount, useConnect, useNetwork } from "wagmi";
 import networks from "../utils/networks.json";
 
 import { switchNetwork } from "../utils/switchNetwork";
+import styles from "../styles/Home.module.css";
 
 export default function Header() {
   const [connectQuery, connect] = useConnect();
@@ -20,7 +21,7 @@ export default function Header() {
     if (!accountQuery.data?.address) {
       return (
         <button
-          className="text-lg font-medium rounded-md px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500"
+          className={styles.gradientButton}
           onClick={() => {
             connect(connectQuery.data.connectors[0]);
           }}
@@ -34,7 +35,7 @@ export default function Header() {
     ) {
       return (
         <button
-          className="text-lg font-medium rounded-md px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500"
+          className={styles.gradientButton}
           onClick={() => {
             switchNetwork();
           }}
@@ -44,13 +45,13 @@ export default function Header() {
       );
     } else {
       return (
-        <div className="flex flex-wrap gap-5 justify-center items-center">
-          <div className="p-3 bg-slate-700 text-lg font-medium rounded-md">
+        <div>
+          <div>
             <span>{truncateEthAddress(accountQuery.data?.address)}</span>
           </div>
           <button
             onClick={disconnect}
-            className="text-lg font-medium rounded-md px-5 py-3 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500"
+            className={styles.gradientButton}
           >
             Disconnect
           </button>
@@ -60,10 +61,10 @@ export default function Header() {
   };
 
   return (
-    <header className="flex flex-wrap justify-between p-5 mb-10">
+    <header>
       <Link href="/">
-        <a className="text-xl md:mb-auto mb-5 font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-indigo-500">
-          Frontend
+        <a>
+          <b>I Know Multiplier</b>
         </a>
       </Link>
       <div className="flex justify-center items-center">

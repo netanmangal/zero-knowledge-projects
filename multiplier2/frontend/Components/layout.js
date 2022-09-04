@@ -1,7 +1,6 @@
 import Header from "./header";
 import Footer from "./footer";
 import Head from "next/head";
-import Script from "next/script";
 import { Provider as WagmiProvider } from "wagmi";
 import { providers } from "ethers";
 
@@ -53,7 +52,7 @@ export default function Layout({ children }) {
         />
       </Head>
       <WagmiProvider autoConnect provider={provider}>
-        <div className={styles.backgroundParent}>
+        <div className={styles.backgroundParentColor}>
           <Header />
           <main className="mb-auto">{children}</main>
           <Footer />
