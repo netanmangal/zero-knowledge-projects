@@ -6,6 +6,7 @@ import { Provider as WagmiProvider } from "wagmi";
 import { providers } from "ethers";
 
 import networks from "../utils/networks.json";
+import styles from "../styles/Home.module.css";
 
 // Provider that will be used when no wallet is connected (aka no signer)
 const provider = providers.getDefaultProvider(
@@ -18,41 +19,41 @@ export default function Layout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <title>zkArcade</title>
-        <meta name="title" content="zkGames" />
-        <meta name="description" content="Zero Knowledge Games Platform" />
+        <title>ZK-iKnowMultiplier</title>
+        <meta name="title" content="Frontend" />
+        <meta name="description" content="Zero Knowledge Frontend" />
         <meta name="theme-color" content="#ea580c" />
 
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="#" />
-        <meta property="twitter:title" content="zkGames" />
+        <meta property="twitter:title" content="Frontend" />
         <meta
           property="twitter:description"
-          content="Zero Knowledge Games Platform"
+          content="Zero Knowledge Frontend"
         />
         <meta
           property="twitter:image"
-          content="https://zkgames.one/socialMedia.png"
+          content=""
         />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" key="ogtype" />
-        <meta property="og:url" content="https://zkgames.one/" key="ogurl" />
+        <meta property="og:url" content="" key="ogurl" />
         <meta
           property="og:image"
-          content="https://zkgames.one/socialMedia.png"
+          content=""
           key="ogimage"
         />
-        <meta property="og:title" content="zkGames" key="ogtitle" />
+        <meta property="og:title" content="Frontend" key="ogtitle" />
         <meta
           property="og:description"
-          content="Zero Knowledge Games Platform"
+          content="Zero Knowledge Frontend"
           key="ogdesc"
         />
       </Head>
       <WagmiProvider autoConnect provider={provider}>
-        <div className="flex flex-col min-h-screen px-2 bg-slate-900 text-slate-300">
+        <div className={styles.backgroundParent}>
           <Header />
           <main className="mb-auto">{children}</main>
           <Footer />

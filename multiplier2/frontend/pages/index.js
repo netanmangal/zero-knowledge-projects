@@ -6,9 +6,6 @@ import Card from '../Components/Card';
 const Home = () => {
   return (
     <div className={styles.backgroundParent}>
-      <Head>
-        <title>ZK-iKnowMultiplier</title>
-      </Head>
       <Card />
     </div>
   );
